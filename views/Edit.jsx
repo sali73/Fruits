@@ -15,6 +15,10 @@ class Edit extends React.Component {
                     Color:{' '}
                     <input type="text" name="color" value={fruit.color} />
                     <br />
+                    <input type="text" name="img" value={fruit.img} />
+                    <br />
+                    <input type="text" name="calories" value={fruit.calories} />
+                    <br />
                     Is Ready To Eat:{' '}
                     <input
                         type="checkbox"

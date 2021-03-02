@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 const fruitSchema = new Schema({
     name: { type: String, required: true },
     color: { type: String, required: true },
-    readyToEat: Boolean
+    img: { type: String, required: true },
+    calories: { type: String, required: true },
+    readyToEat: Boolean,
 }, { timestamps: true });
 
 //  Create Model from our Schema

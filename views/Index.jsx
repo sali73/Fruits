@@ -24,15 +24,18 @@ class Index extends React.Component {
                             console.log(fruit._id);
                             return (
                                 <li>
-                                    The{' '}
+                                    
                                     <a href={`/fruits/${fruit._id}`}>
-                                        {fruit.name}
-                                    </a>{' '}
-                                    is {fruit.color} <br></br>
+                                        <img src={fruit.img}></img>
+                                    </a>
+                                    
+                                    {/* <p>{fruit.calories}</p> */}
+
+                                    {/* is {fruit.color} <br></br>
                                     {fruit.readyToEat
                                         ? `It is ready to eat`
                                         : `It is not ready to eat`}
-                                    <br />
+                                    <br /> */}
                                     <a href={`/fruits/edit/${fruit._id}`}>
                                         EDIT {fruit.name}
                                     </a>
@@ -40,7 +43,7 @@ class Index extends React.Component {
                                         action={`/fruits/${fruit._id}?_method=DELETE`}
                                         method="post"
                                     >
-                                        <input type="submit" value="delete" />
+                                    <input type="submit" value="delete" />
                                     </form>
                                 </li>
                             );

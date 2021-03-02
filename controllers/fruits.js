@@ -13,9 +13,10 @@ const isAuthenticated = (req, res, next) => {
     }
 };
 
+//-----------
 //ROUTES
+//-----------
 
-// routes
 // Index
 fruitController.get('/', isAuthenticated, (req, res) => {
     // Use Fruits model to get all Fruits
@@ -29,7 +30,7 @@ fruitController.get('/', isAuthenticated, (req, res) => {
 });
 
 // New
-fruitController.get('/new', isAuthenticated, (req, res) => {
+fruitController.get('/new',(req, res) => {
     res.render('New');
 });
 
@@ -71,14 +72,14 @@ fruitController.post('/', (req, res) => {
 // });
 
 //DELETE ROUTE
-fruitController.delete('/:id', isAuthenticated, (req, res) => {
+fruitController.delete('/:id', (req, res) => {
     Fruit.findByIdAndRemove(req.params.id, (err, data) => {
         res.redirect('/fruits');
     });
 });
 
 // Show
-fruitController.get('/:id', isAuthenticated, (req, res) => {
+fruitController.get('/:id', (req, res) => {
     // Find the specific document
     Fruit.findById(req.params.id, (error, foundFruit) => {
         // render the Show route and pass it the foundFruit
@@ -89,7 +90,7 @@ fruitController.get('/:id', isAuthenticated, (req, res) => {
 });
 
 //EDIT
-fruitController.get('/edit/:id', isAuthenticated, (req, res) => {
+fruitController.get('/edit/:id',(req, res) => {
     Fruit.findById(req.params.id, (error, foundFruit) => {
         res.render('Edit', { fruit: foundFruit });
     });
@@ -106,8 +107,6 @@ fruitController.put('/edit/:id', (req, res) => {
         res.redirect('/fruits');
     });
 });
-
-////////////
 
 //Export
 module.exports = fruitController;
