@@ -1,10 +1,12 @@
 const React = require('react');
+const AppLayout = require('./AppLayout.jsx');
+
 
 class Edit extends React.Component {
     render() {
         const { fruit } = this.props;
         return (
-            <div>
+            <AppLayout>
                 <h1>Edit Fruit page</h1>
                 <form
                     action={`/fruits/edit/${fruit._id}?_method=put`}
@@ -28,7 +30,7 @@ class Edit extends React.Component {
                     <br />
                     <input type="submit" name="" value="Edit Fruit" />
                 </form>
-            </div>
+            </AppLayout>
         );
     }
 }

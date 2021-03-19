@@ -17,6 +17,7 @@
     "license": "ISC",
     "dependencies": {
         "bcryptjs": "^2.4.3",
+        "bootstrap": "^4.6.0",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "express-react-views": "^0.11.0",
@@ -24,6 +25,7 @@
         "method-override": "^3.0.0",
         "mongoose": "^5.9.10",
         "react": "^16.13.1",
+        "react-bootstrap": "^1.5.1",
         "react-dom": "^16.13.1",
         "session": "^0.1.0"
     }

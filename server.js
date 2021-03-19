@@ -45,7 +45,7 @@ app.use('/user', userController);
 //---------------------
 // mongoose connection
 //---------------------
-mongoose.connect('mongodb+srv://saliMohamed:Sa101209ah@@cluster0.cmhxg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://saliMohamed:Sa101209ah@@cluster0.cmhxg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', function(){
   console.log('Conection has been made!');
 }).on('error', function(error){
