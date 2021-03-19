@@ -4,28 +4,28 @@ const React = require('react');
 class AppLayout extends React.Component {
     render() {
         return (
-            <>
+            < div style={{fontFamily:'Cursive'}}>
                 <nav>
                     <title>Fruits Page</title>   
                 </nav>
 
-                <nav style={{ display:'flex', height:'95px', backgroundColor: '#f8f9d2', backgroundImage: 'linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%)',}} >
+                <nav style={{ display:'flex', height:'85px', backgroundColor: '#f8f9d2', backgroundImage: 'linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%)',}} >
                     
                     <ul style={{ display:'flex', listStyleType:'none'}}>
 
-                      <li style={{paddingRight:'320px', fontSize:'40px',color: ' #f8f9d2', marginTop:'50px', textShadow: '2px 2px 8px #302441'}}>Fruits App!</li>
+                      <li style={{paddingRight:'320px', fontSize:'43px',color: ' #f8f9d2', marginTop:'40px', textShadow: '2px 2px 8px #000000', }}>Fruits App!</li>
 
                       <li style={{paddingRight:'100px', paddingTop:'10px', fontSize:'25px' }}>
-                          <a style={{color:'#f8f9d2', textDecoration: 'none', textShadow: '1px 1px 5px #171022'}} href="/fruits">Home</a>
+                          <a style={{color:'#695787', textDecoration: 'none', textShadow: '1px 1px #171022'}} href="/fruits">Home</a>
                       </li>
                     
                       <li style={{paddingRight:'100px', paddingTop:'10px', fontSize:'25px', }}>
-                          <a style={{textDecoration: 'none',color:'#f8f9d2', textShadow: '1px 1px 5px #171022'}} href="/fruits/new"> New Fruit</a>    
+                          <a style={{textDecoration: 'none',color:'#695787', textShadow: '1px 1px #171022'}} href="/fruits/new"> New Fruit</a>    
                       </li>
                    
                       <div className='user'>
                           <li style={{paddingRight:'100px', fontSize:'25px', paddingTop:'10px', }}>
-                              <a style={{textDecoration: 'none', color:'#f8f9d2', textShadow: '1px 1px 5px #171022'}} href="/user/new">Sing up</a>
+                              <a style={{textDecoration: 'none', color:'#695787', textShadow: '1px 1px #171022'}} href="/user/new">Sing up</a>
                           </li>    
                       </div>
 
@@ -35,7 +35,13 @@ class AppLayout extends React.Component {
                 <body>
                     {this.props.children}
                 </body>
-            </>
+                <div>
+                    <h3 style={{height:'75px', backgroundColor: '#f8f9d2', backgroundImage: 'linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%)', textAlign:'center', paddingTop:'35px', fontSize: '25px', marginTop:'5px'}}>
+                        @2021 by 
+                        <a style={{textDecoration:'none'}} href="https://salimohamed.me/"> Sali Mohamed</a>
+                    </h3>
+                </div>
+            </div>
         );
     }
 }
