@@ -24,7 +24,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 require('dotenv').config(); //Process.env holds all your env variables
-const port = process.env.PORT || 3000; // Port Number
+const port = process.env.PORT || 8080; // Port Number
 app.use(
     session({
         secret: 'keyboard cat',
@@ -105,6 +105,6 @@ module.exports = session
 //---------
 // listen
 //---------
-app.listen( process.env.PORT || 3000, () => {
+app.listen( process.env.PORT || 8080, () => {
     console.log('listening on: ' + port);
 });
