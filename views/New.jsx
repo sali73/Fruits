@@ -7,7 +7,7 @@ class New extends React.Component {
           <AppLayout>
 
               <div style={{ textAlign:'center', backgroundColor: '#f6f0c4 ', backgroundImage: 'linear-gradient(315deg, #f6f0c4 74%, #d99ec9 0%)', height:'92px',padding: '10px '}}>
-                 <h2 style={{color:'red',  paddingLeft: '170px', marginTop:'80px' }}>Here You Can Add Your Favorite Fruits Or Vegetables!</h2>
+                 <h2 style={{color:'red',  paddingLeft: '170px', marginTop:'40px' }}>Here You Can Add Your Favorite Fruits Or Vegetables!</h2>
               </div>
 
               <div style={{ backgroundColor: '#f6f0c4 ', marginTop:'0px', padding:'50px 100px',borderLeft: '5px solid #d99ec9', textAlign: 'center' }}>
